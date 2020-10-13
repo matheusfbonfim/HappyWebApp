@@ -2,11 +2,29 @@
     <img alt="NextLevelWeek" title="#NextLevelWeek" src="assets/capa_happy.png" width="1000px" />
 </h1>
 
-# 😁 Happy
+<p align="center">	
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/DanielObara/NLW-3.0">
+	
+  <a href="https://www.linkedin.com/in/danielobara/">
+    <img alt="Made by DanielObara" src="https://img.shields.io/badge/made%20by-DanielObara-%2304D361">
+  </a>
+  
+  <a href="https://github.com/DanielObara/NLW-3.0/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DanielObara/NLW-3.0">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+   <a href="https://github.com/DanielObara/NLW-3.0/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/DanielObara/NLW-3.0?style=social">
+  </a>
+</p>
+
+
+## 😁 Happy
 
 Projeto desenvolvido durante o Next Level Week #03
 
-# 💻 Sobre o projeto
+## 💻 Sobre o projeto
 
 Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos que permitem tornar o dia das crianças mais especial.
 
@@ -14,7 +32,7 @@ Happy é um projeto desenvolvido com inspiração no dia das crianças. O objeti
     <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
 </h1>
 
-## :rocket: Tecnologia
+## :rocket: TecnologiaS
 
 This project was developed with the following technologies:
 
