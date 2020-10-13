@@ -35,7 +35,7 @@ This project was developed with the following technologies:
 - [React Native][rn]
 <!-- - [Expo][expo] -->
 
-# ⛏ Ferramentas
+## ⛏ Ferramentas
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Insomnia](https://insomnia.rest/download/)
 - [Expo](https://docs.expo.io/)
