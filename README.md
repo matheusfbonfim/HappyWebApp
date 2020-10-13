@@ -2,20 +2,19 @@
 
 Projeto desenvolvido durante o Next Level Week #03
 
+# 💻 Objetivo 
 
+Happy é um projeto desenvolvido com base no Dia das Crianças. O objetivo é conectar as pessoas a orfanatos que permitem tornar o dia das crianças mais especial.
 
-<h2 align="center">
-  <img src="https://img.shields.io/badge/Next%20Level%20Week-%233-00b8d3?style=for-the-badge" alt="Evento Next Level Week 3" />
-  <img src="https://img.shields.io/badge/web%3F-ok-00b8d3?style=for-the-badge" alt="Sistema web Ok" />
-  <img src="https://img.shields.io/badge/server%3F-no-00b8d3?style=for-the-badge" alt="Server No" />
-  <img src="https://img.shields.io/badge/app mobile%3F-No-00b8d3?style=for-the-badge" alt="Aplicativo mobile No" />
-  <img src="https://img.shields.io/github/license/matheusfelipeog/proffy?color=00b8d3&style=for-the-badge" alt="License" />
-</h2>
+## :rocket: Tecnologia
 
-<h1 align="center">
-  <img src="./.github/assets/images/capa_happy.png" alt="Logo da Proffy" width="1000px" />
-</h1>
+This project was developed with the following technologies:
 
+- [Node.js][nodejs]
+- [TypeScript][typescript]
+- [React][reactjs]
+- [React Native][rn]
+<!-- - [Expo][expo] -->
 
 ## 📌 Index
 
