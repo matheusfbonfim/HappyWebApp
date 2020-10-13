@@ -3,8 +3,8 @@
 </h1>
 
 <p align="center">
-  <a href="#-nlw">Happy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-project">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-">Happy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-information_source-sobre-o-projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-Technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-use">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -13,13 +13,13 @@
 </p>
 
 
-## :information_source: 😁 Happy
+## 😁 Happy
 
 Projeto desenvolvido durante o Next Level Week #03
 
-## 💻 :information_source: Sobre o projeto
+## 💻 Sobre o projeto
 
-Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos que permitem tornar o dia das crianças mais especial.
+Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos, permitindo tornar o dia das crianças mais especial.
 
 <h1 align="center">
     <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
