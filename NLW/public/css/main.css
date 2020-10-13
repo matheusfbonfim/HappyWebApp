@@ -1,0 +1,31 @@
+/*Aplicado a todos elementos*/
+* {
+  margin: 0; /*Sem espaçamentos*/
+  padding: 0; /*Sem preenchimentos*/
+}
+
+body {
+  height: 100vh;
+  color: white;
+}
+
+/*Tamanhos de fontes flexivel - em rem*/
+/*em -> Aplica a fonte conforme o tamanho do elemento pai*/
+/*rem -> Aplica a fonte conforme o tamanho do elemento raiz(HTML)*/
+/*Abaixo é possivel determinar o tamanho padrão, exemplo: font-size: 16px = 1rem*/
+:root {
+    font-size: 62.5%;
+}
+
+body,
+input,
+button,
+textarea {
+  /*
+    font-weight: 400; Espescifica a intensidade
+    line-height:1;    Espaçamento entre as linhas
+    font-size: 18px;  Tamanho da fonte
+    font-family: 'Nunito', sans-serif; Tipo de fonte
+    */
+  font: 400 1.8rem/1 "Nunito", sans-serif; /*Agrupando todos parâmetros*/
+}

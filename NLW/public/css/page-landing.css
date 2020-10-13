@@ -1,0 +1,63 @@
+#page-landing {
+  /*Um gradiente na pagina*/  
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat;
+
+  text-align: center; /*Todo elemento centralizado*/
+  min-height: 100vh; /*Definir a altura mínima de um determinado elemento.*/
+
+  display: flex; /*Permiti flexibilizar a movimentação da determinada boxe, permitindo alinha posteriormente*/
+}
+
+#container {
+  margin: auto; /*Alinha com permissão do display:flex*/
+
+  width: 90%; /*Limitando o tamanho do container*/
+}
+
+.location,
+.visit p,
+h1 {
+  height: 16vh; /*Determina a altura da área do conteúdo de um elemento*/
+}
+
+.visit a {
+  width: 8rem; /*Largura do botão next (rem -> baseado no padrão raiz HTML) */
+  height: 8rem;/*Altura*/
+  background: #ffd666; /*Cor*/
+
+  border: none; /*Sem bordas*/
+  border-radius: 3rem; /*Arredonde as bordas*/
+
+  display: flex; /*Permiti flexibilidade e deixar elementos alinhados*/
+  align-items: center; /*Alinhe os items ao centro, no eixo vertical*/
+  justify-content: center; /*Alinha o elemento(seta) no botão, no eixo horizontal*/
+
+  margin: auto; /*Alinha as margens de maneira ideal*/
+
+  transition: background 200ms; /*Transição para quando passar o mouse e mudar de cor*/ 
+}
+
+/*hover -> Modo que o mouse esta em cima do botão*/
+.visit a:hover{
+    background: #96feff; /*Mudança de cor quando passar o mouse*/
+}
+
+#logo {
+  animation-delay: 50ms; /*Atraso de 50 ms*/
+}
+
+.location {
+  animation-delay: 100ms; /*Atraso de 100 ms*/
+}
+
+main h1 {
+  animation-delay: 150ms; /*Atraso de 150 ms*/
+}
+
+.visit p {
+  animation-delay: 200ms; /*Atraso de 200 ms*/
+}
+
+.visit a {
+  animation-delay: 250ms; /*Atraso de 250 ms*/
+}
