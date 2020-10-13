@@ -12,14 +12,9 @@
   <a href="#memo-license">License</a>
 </p>
 
-
-## 😁 Happy
-
-Projeto desenvolvido durante o Next Level Week #03
-
 ## 💻 Sobre o projeto
-
-Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos, permitindo tornar o dia das crianças mais especial.
+- Projeto desenvolvido durante o Next Level Week #03
+- Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos, permitindo tornar o dia das crianças mais especial.
 
 <h1 align="center">
     <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
