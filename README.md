@@ -2,21 +2,14 @@
     <img alt="NextLevelWeek" title="#NextLevelWeek" src="assets/capa_happy.png" width="1000px" />
 </h1>
 
-<p align="center">	
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/DanielObara/NLW-3.0">
-	
-  <a href="https://www.linkedin.com/in/danielobara/">
-    <img alt="Made by DanielObara" src="https://img.shields.io/badge/made%20by-DanielObara-%2304D361">
-  </a>
-  
-  <a href="https://github.com/DanielObara/NLW-3.0/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DanielObara/NLW-3.0">
-  </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/DanielObara/NLW-3.0/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/DanielObara/NLW-3.0?style=social">
-  </a>
+<p align="center">
+  <a href="#-nlw">Happy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-Technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-use">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
 </p>
 
 
@@ -32,7 +25,7 @@ Happy é um projeto desenvolvido com inspiração no dia das crianças. O objeti
     <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
 </h1>
 
-## :rocket: TecnologiaS
+## :rocket: Tecnologias
 
 This project was developed with the following technologies:
 
