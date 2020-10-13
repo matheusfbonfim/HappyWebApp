@@ -1,3 +1,5 @@
+<!-- Figura de capa -->
+
 <h1 align="center">
     <img alt="NextLevelWeek" title="#NextLevelWeek" src="assets/capa_happy.png" width="1000px" />
 </h1>
@@ -11,6 +13,8 @@
   <a href="#memo-license">License</a>
 </p>
 
+<!-- Tópicos -->
+
 ## 💻 Sobre o projeto
 - Projeto desenvolvido durante o Next Level Week #03
 - Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos, permitindo tornar o dia das crianças mais especial.
@@ -18,6 +22,8 @@
 <h1 align="center">
     <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
 </h1>
+
+## 📸 Screenshots
 
 ## :rocket: Tecnologias
 
@@ -28,6 +34,28 @@ This project was developed with the following technologies:
 - [React][reactjs]
 - [React Native][rn]
 <!-- - [Expo][expo] -->
+
+# ⛏ Ferramentas
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Insomnia](https://insomnia.rest/download/)
+- [Expo](https://docs.expo.io/)
+- Mobile Device
+
+## 🚀 Como executar o projeto
+
+Podemos considerar este projeto como sendo divido em três partes:
+1. Back End (pasta server) 
+2. Front End (pasta web)
+3. Mobile (pasta mobile)
+
+💡Tanto o Front End quanto o Mobile precisam que o Back End esteja sendo executado para funcionar.
+
+## :memo: License
+
+O projeto está sobre a licença [MIT](./LICENSE) ❤️ 
+
+
+<!-- FIM -->
 
 ## 📌 Index
 
@@ -46,7 +74,7 @@ Uma plataforma para facilitar o encontro de orfanatos por pessoas que querem vis
 O projeto está em desenvolvimento na [Next Level Week 3](https://nextlevelweek.com/episodios/omnistack/1/edicao/3)
 
 
-## 📸 Screenshots
+
 
 
 ## 🛠 Techs
@@ -104,8 +132,12 @@ Siga os passos abaixo para contribuir:
 7. Pronto, agora só aguardar a análise 🚀 
 
 
-## 📜 License
 
-O projeto está sobre a licença [MIT](./LICENSE) ❤️ 
-
-Gostou? Deixe uma estrelinha para ajudar o projeto ⭐
+<h3 align="center">
+Feito com ❤️ por <a href="https://www.linkedin.com/in/matheus-bonfim-448667169/">Matheus Bonfim</a>
+<br><br>
+<a href="https://rocketseat.com.br">
+  <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
+</a>
+</h3>
+</h3>
