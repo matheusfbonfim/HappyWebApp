@@ -9,7 +9,7 @@ Projeto desenvolvido durante o Next Level Week #03
 Happy é um projeto desenvolvido com base no Dia das Crianças. O objetivo é conectar as pessoas a orfanatos que permitem tornar o dia das crianças mais especial.
 
 <h1 align="center">
-    <img alt="Example" title="Example" src="Happy/assets/Home.svg" width="500px" />
+    <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
 </h1>
 
 ## :rocket: Tecnologia
