@@ -1,3 +1,4 @@
+/*Bloco geral e configurações*/
 #page-landing {
   /*Um gradiente na pagina*/  
   background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat;
@@ -10,8 +11,8 @@
 
 #container {
   margin: auto; /*Alinha com permissão do display:flex*/
-
-  width: 90%; /*Limitando o tamanho do container*/
+  /*Analisa o menor valor, sendo 90% da tela ou 112rem -> baseado em 10px(62.5%)*/
+  width: min(90%,112rem); /*Limitando o tamanho do container, colocando o menor valor possivel*/
 }
 
 .location,
@@ -20,6 +21,27 @@ h1 {
   height: 16vh; /*Determina a altura da área do conteúdo de um elemento*/
 }
 
+#logo {
+  animation-delay: 50ms; /*Atraso de 50 ms*/
+}
+
+.location {
+  animation-delay: 100ms; /*Atraso de 100 ms*/
+}
+
+/*h1 -> "Leve felicidade...*/
+main h1 {
+  animation-delay: 150ms; /*Atraso de 150 ms*/
+  /*clamp(min,desejado,max) -> Limita o tamanho da fonte*/
+  font-size: clamp(4rem, 8vw, 8.4rem); /* vw-> Com base na largura do documento, o espaçamento -> rem */    
+}
+
+/*p -> "Visite orfa...*/
+.visit p {
+  animation-delay: 200ms; /*Atraso de 200 ms*/
+}
+
+/*Botão next...*/
 .visit a {
   width: 8rem; /*Largura do botão next (rem -> baseado no padrão raiz HTML) */
   height: 8rem;/*Altura*/
@@ -35,29 +57,67 @@ h1 {
   margin: auto; /*Alinha as margens de maneira ideal*/
 
   transition: background 200ms; /*Transição para quando passar o mouse e mudar de cor*/ 
+
+  animation-delay: 250ms; /*Atraso de 250 ms*/
+
 }
 
 /*hover -> Modo que o mouse esta em cima do botão*/
 .visit a:hover{
-    background: #96feff; /*Mudança de cor quando passar o mouse*/
+  background: #96feff; /*Mudança de cor quando passar o mouse*/
 }
 
-#logo {
-  animation-delay: 50ms; /*Atraso de 50 ms*/
-}
 
-.location {
-  animation-delay: 100ms; /*Atraso de 100 ms*/
-}
+/*Desktop version
+  Toda tela que tiver no minimo 760px, será aplicado tais regras*/
+@media (min-width:760px){
+  header{
+    display: flex; /*Todos os conteudos ficarão um do lado do outro*/
+    align-items: center; /*Centralizando elementos no eixo x*/
+    justify-content: space-between; /*Coloca espaço entre a logo e o location*/
+  }
 
-main h1 {
-  animation-delay: 150ms; /*Atraso de 150 ms*/
-}
+  .location,.visit p,h1 {
+    height: initial; /*Determina a altura da área do conteúdo de um elemento, com valores iniciais*/
+    text-align: initial; /*Voltar para o alinhamento inicial*/ 
+  }
 
-.visit p {
-  animation-delay: 200ms; /*Atraso de 200 ms*/
-}
+  /*Aplicando especificamente para location*/
+  .location{
+    text-align: right;
+    font-size: 2.4 rem;
+    line-height: 1.5; /*Espaçamento*/
+  }
 
-.visit a {
-  animation-delay: 250ms; /*Atraso de 250 ms*/
+  /*Editando o texto "Leve felicidade...*/
+  main h1{
+    font-weight: bold; /*Intensidade -> negrito*/
+    line-height: .88; /*Espaçamento das linhas*/
+
+    /*Limitação de tamanho*/
+    width: min(300px, 80%);
+
+    /*Aplicando margem para ficar afastado dos outros elementos*/
+    /*O 1 parametro do margin é para o topo, assim aplicará o clamp*/
+    /*O clamp dará uma dinâmica do limite dessa margem*/
+    margin: clamp(10%, 9vh, 12%) 0 4rem; 
+  }
+
+  /*Texto: 'Visite orf..." com o botão*/
+  .visit{
+  display: flex; /*Alinha o botao com o texto lado a lado*/
+  align-items: center; /*Alinha no eixo x*/
+  justify-content: space-between; /*Espaçamento entre eles*/
+  }
+
+  .visit p{
+    font-size: 2.4 rem; /*Tamanho da fonte*/
+    line-height:1.5; /*Separaçao - Espaçamento*/
+    width: clamp(20rem, 20vw, 30rem);/*Largura*/
+  }
+
+  .visit a {
+    margin: initial; /*Redeclarar a margin que estava no automatico*/
+  }
+
 }
