@@ -1,4 +1,6 @@
-
+<h1 align="center">
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src="assets/capa_happy.png" width="250px" />
+</h1>
 
 # 😁 Happy
 
@@ -6,10 +8,10 @@ Projeto desenvolvido durante o Next Level Week #03
 
 # 💻 Sobre o projeto
 
-Happy é um projeto desenvolvido com base no Dia das Crianças. O objetivo é conectar as pessoas a orfanatos que permitem tornar o dia das crianças mais especial.
+Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos que permitem tornar o dia das crianças mais especial.
 
 <h1 align="center">
-    <img alt="Example" title="Example" src="assets/Home.svg" width="800px" />
+    <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
 </h1>
 
 ## :rocket: Tecnologia
