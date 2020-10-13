@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="#-nlw">Happy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-nlw">😁 Happy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-Technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -13,7 +13,7 @@
 </p>
 
 
-## 😁 Happy
+## :information_source: 😁 Happy
 
 Projeto desenvolvido durante o Next Level Week #03
 
