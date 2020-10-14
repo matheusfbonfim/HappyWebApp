@@ -2,6 +2,7 @@
 * {
   margin: 0; /*Sem espaçamentos*/
   padding: 0; /*Sem preenchimentos*/
+  box-sizing: border-box; /*Calcula das caixas serão a partir da borda*/
 }
 
 body {

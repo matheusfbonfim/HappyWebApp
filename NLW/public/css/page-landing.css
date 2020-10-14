@@ -1,6 +1,6 @@
 /*Bloco geral e configurações*/
 #page-landing {
-  /*Um gradiente na pagina*/  
+  /*Um gradiente na pagina*/
   background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat;
 
   text-align: center; /*Todo elemento centralizado*/
@@ -12,6 +12,7 @@
 #container {
   margin: auto; /*Alinha com permissão do display:flex*/
   /*Analisa o menor valor, sendo 90% da tela ou 112rem -> baseado em 10px(62.5%)*/
+  
   width: min(90%,112rem); /*Limitando o tamanho do container, colocando o menor valor possivel*/
 }
 
@@ -33,7 +34,7 @@ h1 {
 main h1 {
   animation-delay: 150ms; /*Atraso de 150 ms*/
   /*clamp(min,desejado,max) -> Limita o tamanho da fonte*/
-  font-size: clamp(4rem, 8vw, 8.4rem); /* vw-> Com base na largura do documento, o espaçamento -> rem */    
+  font-size: clamp(4rem,8vw,8.4rem); /* vw-> Com base na largura do documento, o espaçamento -> rem */
 }
 
 /*p -> "Visite orfa...*/
@@ -44,7 +45,7 @@ main h1 {
 /*Botão next...*/
 .visit a {
   width: 8rem; /*Largura do botão next (rem -> baseado no padrão raiz HTML) */
-  height: 8rem;/*Altura*/
+  height: 8rem; /*Altura*/
   background: #ffd666; /*Cor*/
 
   border: none; /*Sem bordas*/
@@ -56,43 +57,51 @@ main h1 {
 
   margin: auto; /*Alinha as margens de maneira ideal*/
 
-  transition: background 200ms; /*Transição para quando passar o mouse e mudar de cor*/ 
-
+  transition: background 200ms; /*Transição para quando passar o mouse e mudar de cor*/
   animation-delay: 250ms; /*Atraso de 250 ms*/
-
 }
 
 /*hover -> Modo que o mouse esta em cima do botão*/
-.visit a:hover{
+.visit a:hover {
   background: #96feff; /*Mudança de cor quando passar o mouse*/
 }
 
-
 /*Desktop version
   Toda tela que tiver no minimo 760px, será aplicado tais regras*/
-@media (min-width:760px){
-  header{
+@media (min-width: 760px) {
+  /*Container aborda todos os elementos*/
+  #container {
+    padding: 5rem 2rem; /*Preenchimento para caber a imagem*/
+
+    /*shorthand background: image repeat position / size*/
+    /*80% -> O quanto que esta centralizando*/
+    background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
+  }
+
+  header {
     display: flex; /*Todos os conteudos ficarão um do lado do outro*/
     align-items: center; /*Centralizando elementos no eixo x*/
     justify-content: space-between; /*Coloca espaço entre a logo e o location*/
   }
 
-  .location,.visit p,h1 {
+  .location,
+  .visit p,
+  h1 {
     height: initial; /*Determina a altura da área do conteúdo de um elemento, com valores iniciais*/
-    text-align: initial; /*Voltar para o alinhamento inicial*/ 
+    text-align: initial; /*Voltar para o alinhamento inicial*/
   }
 
   /*Aplicando especificamente para location*/
-  .location{
+  .location {
     text-align: right;
     font-size: 2.4 rem;
     line-height: 1.5; /*Espaçamento*/
   }
 
   /*Editando o texto "Leve felicidade...*/
-  main h1{
+  main h1 {
     font-weight: bold; /*Intensidade -> negrito*/
-    line-height: .88; /*Espaçamento das linhas*/
+    line-height: 0.88; /*Espaçamento das linhas*/
 
     /*Limitação de tamanho*/
     width: min(300px, 80%);
@@ -100,24 +109,23 @@ main h1 {
     /*Aplicando margem para ficar afastado dos outros elementos*/
     /*O 1 parametro do margin é para o topo, assim aplicará o clamp*/
     /*O clamp dará uma dinâmica do limite dessa margem*/
-    margin: clamp(10%, 9vh, 12%) 0 4rem; 
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
   }
 
   /*Texto: 'Visite orf..." com o botão*/
-  .visit{
-  display: flex; /*Alinha o botao com o texto lado a lado*/
-  align-items: center; /*Alinha no eixo x*/
-  justify-content: space-between; /*Espaçamento entre eles*/
+  .visit {
+    display: flex; /*Alinha o botao com o texto lado a lado*/
+    align-items: center; /*Alinha no eixo x*/
+    justify-content: space-between; /*Espaçamento entre eles*/
   }
 
-  .visit p{
+  .visit p {
     font-size: 2.4 rem; /*Tamanho da fonte*/
-    line-height:1.5; /*Separaçao - Espaçamento*/
-    width: clamp(20rem, 20vw, 30rem);/*Largura*/
+    line-height: 1.5; /*Separaçao - Espaçamento*/
+    width: clamp(20rem, 20vw, 30rem); /*Largura*/
   }
 
   .visit a {
     margin: initial; /*Redeclarar a margin que estava no automatico*/
   }
-
 }

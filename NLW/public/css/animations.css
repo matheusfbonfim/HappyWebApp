@@ -11,8 +11,24 @@
     }
 }
 
+/*Animação de vir da esquerda para direita*/
+@keyframes right{
+    from{
+        transform: translateX(-100%); /*Vindo fora da tela*/
+    }to{
+        transform: translateX(0)/*Vai terminar na posição original*/
+    }
+}
+
+
 .animate-up{
     animation-name: up;
     animation-duration: 300ms;
     animation-fill-mode: backwards; /*Faz com que depois da animação o item permaneça com aquelas caracteristicas*/ 
+}
+
+/*Declarando a animação*/
+.animate-right {
+    animation-name: right;
+    animation-duration: 300ms; 
 }
