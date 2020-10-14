@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Responsavel pelo @media / Objetivo de adequar a aplicação dependendo da tela-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lar das meninas | Happy</title>
+
+    <!--Leafleft - CSS do mapa a ser inserido-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
+     <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    <link rel="icon" href="./public/images/logo-icon.png" />
+
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/animations.css" />
+    <link rel="stylesheet" href="./public/css/page-orphanage.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page-orphanage">
+      <!--Barra Lateral-->
+      <aside class="animate-right">
+        
+      </aside>
+
+      <!--Conteudo da página-->
+      <main>
+        <div id="orphanage-details">
+          <!--Imagem maior-->
+          <img src= "./public/images/home.jpg" alt= "Lar das meninas">
+
+          <!--Sequência de imagens-->
+          <div class="images">
+            <!--Cria um botão-->
+            <button class='active' type= "button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas"> <!--Uma imagem como se fosse um botão-->
+            </button>
+
+            <button type= "button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            </button>
+
+            <button type= "button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            </button>
+
+            <button type= "button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            </button>
+
+            <button type= "button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            </button>
+
+            <button type= "button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            </button>
+
+
+          </div>
+
+          <!--Titulo, informações, conteudo abaixo das imagens-->
+          <div class="orphanage-details-content">
+            <h1>Lar das meninas</h1>
+
+            <p>
+              Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.
+            </p>
+            
+            <!--Divisão que conterá o bloco do Mapa-->
+            <div class="map-container">
+              <div id="mapid">
+
+              </div>
+
+              <!--Rodapé do mapa-->
+              <footer>
+                <a href="">Ver rotas no Google Maps</a>
+              </footer>
+            </div>
+
+            <!--Linha que divide o mapa de intruções-->
+            <hr>
+
+            <h2>Instruções para visita</h2>
+
+            <p>Venha como se sentir a vontade e traga muito amor e paciência para dar.</p>
+
+            <!-- Bloco de informações de abertura do orfanato-->
+            <div class="open-details">
+              <!--Bloco que informa o horário de atendimento-->
+              <div class="hour">
+                
+              </div>
+
+              <!--Bloco que informa os dias de atendimento-->
+              <div class="open-on-weekends">
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+
+    <!--JS recomendado ser o ultimo elemento a ser chamado-->
+    <script src="./public/scripts/page-orphanage.js"></script>
+
+  </body>
+</html>
