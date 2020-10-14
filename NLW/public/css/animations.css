@@ -20,6 +20,15 @@
     }
 }
 
+/*Aparição*/
+@keyframes appear {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
 
 .animate-up{
     animation-name: up;
@@ -31,4 +40,12 @@
 .animate-right {
     animation-name: right;
     animation-duration: 300ms; 
+}
+
+/*Classe que será aplicada*/
+.animate-appear{
+    animation-name:appear;
+    animation-duration: 300ms;
+    /*Vai fazer a transição de opacidade de 0 para 1 e vai parar no 1, nao voltando para 0*/
+    animation-fill-mode: backwards; 
 }

@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Localize um orfanato | Happy</title>
 
+    <!--Leafleft - CSS do mapa a ser inserido-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
+     <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
     <link rel="icon" href="./public/images/logo-icon.png" />
 
     <link rel="stylesheet" href="./public/css/main.css" />
@@ -13,7 +25,7 @@
     <link rel="stylesheet" href="./public/css/page-orphanages.css" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -38,12 +50,16 @@
       </aside>
 
       <!--Mapa-->
-      <div id="mapid"></div>
+      <div id="mapid" class= "animate-appear"></div>
 
       <!--Botão de criar orfanato - tag a com link-->
       <a href="create-orphanages.html" class="create-orphanages" title="Cadastre um orfanato">
         <img src="./public/images/plus.svg" alt="Criar orfanato"/>
       </a>
     </div>
+
+    <!--JS recomendado ser o ultimo elemento a ser chamado-->
+    <script src="./public/scripts/page-orphanages.js"></script>
+
   </body>
 </html>
