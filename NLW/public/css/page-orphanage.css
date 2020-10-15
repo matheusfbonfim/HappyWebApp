@@ -4,47 +4,6 @@
     min-height: 100vh; /*Altura minima*/
 }
 
-/*Barra lateral - Configurações gerais*/
-aside.sidebar{
-    /*Cria um novo contexto, deixando a barra lateral acima*/
-    position: fixed; /*Mesmo se rolar a pagina os icones ficam fixados*/
-    height: 100%;/*Altura*/
-    padding: 3.2rem 2.4rem; /*32px 24px*/ /*Preenchimento*/
-    background: #15C3D6; /*Cor de fundo*/
-
-    display: flex; /*Arrumando conteudo dentro dele - Alinhando*/
-    flex-direction: column; /*Em vez de alinhar, deixar como coluna*/
-    justify-content: space-between; /*Espaço entre eles*/
-    align-items: center; /*Alinhar elementos ao centro*/
-}
-
-/*Botão da barra lateral*/
-aside.sidebar footer button{
-    width: 48px; /*Largura*/
-    height: 48px; /*Altura*/
-    border: none; /*Tirar as bordas*/
-    background: #12AFCB; /*Cor de fundo do botão*/
-    border-radius: 1.6rem; /*Arredondamento da borda*/
-    /*Curso pointer->Quando passar o mouse muda o aspecto do cursor*/
-    cursor: pointer;
-
-    display: flex; /*Alinhando o conteudo dentro dele*/
-    align-items: center; /*Alinha conteudo com o centro*/
-    justify-content: center; /*Deixa elemento centralizado*/
-
-    transition: background-color 0.2s; /*Transição para animação quando passar o mouse*/
-}
-
-/*Mudança de cor - Mouse - Botão lateral*/
-aside.sidebar footer button:hover{
-    background: #17D6EB;
-}
-
-/*CSS do main, bloco de conteudo*/
-.with-sidebar{
-    padding-left: 110px;/*Preenchimento a esquerda, devido a barra lateral*/
-}
-
 main{
     flex: 1; /*Flex 1 faz com que o main ocupe todo espaço disponivel para ele, fazendo com que o
     o margin:auto funcione*/
@@ -137,39 +96,6 @@ os primeiros que aparecerem fora bloco)*/
     margin-top: 2.4rem; /*Margem abaixo*/
 }
 
-/*Mapa container*/
-.map-container{
-    margin-top:6.4rem; /*Separação superior*/
-    background: #e6f7fb; /*Cor de fundo do mapa*/
-    border: 1px solid #b3dae2; /*Borda do mapa*/
-    border-radius: 2rem ;/*Arredondamento de borda*/
-}
-
-/*Configurações do mapa dentro do bloco*/
-#mapid{
-    width: 100%; /*Largura de 100% da caixa onde estiver*/
-    height: 28rem; /*Altura fixa*/
-}
-
-/*Rodape do bloco do mapa*/
-.map-container footer{
-    padding: 2rem 0; /*Preenchimento interno*/
-    text-align:center; /*Centraliza o texto*/
-}
-
-/*Botão no rodapé - Ver rotas no google maps*/
-.map-container footer a{
-    color: #0089A5; /*Cor da fonte*/
-    text-decoration: none; /*Tirando a linha de hiperlink*/
-
-}
-
-/*Configurando o proprio mapa, com a classe do link leaflet*/
-.map-container .leaflet-container{
-    border-bottom: 1px solid #dde3f0; /*Borda embaixo*/
-    border-radius: 2rem; /*Arredonda o mapa*/
-}
-
 /*Linha que divide o mapa*/
 .orphanage-details-content hr{
     width: 100%;/*Largura da linha*/
@@ -230,36 +156,4 @@ os primeiros que aparecerem fora bloco)*/
     background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
     border: 1px solid #A1E9C5;
     border-radius: 20px;
-}
-
-/*Botão de contato - Whats*/
-.primary-button{
-    margin-top: 6.4rem; /*Espaçamento superior*/
-    
-    width: 100%; /*Largura */
-    height: 6.4rem; /*Altura*/
-    border: 0; /*Retirar a borda*/
-
-    cursor:pointer; /*Cursor do tipo pointer - Mouse com indicador diferente*/
-    
-    background: #3CDC8C; /*Cor de fundo*/
-    
-    border-radius: 2rem; /*Arredondar a borda*/
-    color: white;/*Cor de texto*/
-
-    display: flex; /*Alinha um do lado do outro*/
-    align-items: center; /*Alinha os itens*/
-    justify-content: center; /*Centraliza os elementos*/
-
-    transition: background-color .2s;/*Transição de cor*/
-}
-
-/*Mouse em cima do botão*/
-.primary-button:hover{
-    background: #36cf82;
-}
-
-/*Somente a img do button*/
-.primary-button img{
-    margin-right: 1.6rem; /*Afastou do texto do botao*/
 }

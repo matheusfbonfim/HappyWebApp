@@ -1,0 +1,32 @@
+/*Mapa container*/
+.map-container{
+    margin-top:6.4rem; /*Separação superior*/
+    background: #e6f7fb; /*Cor de fundo do mapa*/
+    border: 1px solid #DDE3F0; /*Borda do mapa*/
+    border-radius: 2rem ;/*Arredondamento de borda*/
+}
+
+/*Configurações do mapa dentro do bloco*/
+#mapid{
+    width: 100%; /*Largura de 100% da caixa onde estiver*/
+    height: 28rem; /*Altura fixa*/
+}
+
+/*Rodape do bloco do mapa*/
+.map-container footer{
+    padding: 2rem 0; /*Preenchimento interno*/
+    text-align:center; /*Centraliza o texto*/
+}
+
+/*Botão no rodapé - Ver rotas no google maps*/
+.map-container footer a{
+    color: #0089A5; /*Cor da fonte*/
+    text-decoration: none; /*Tirando a linha de hiperlink*/
+    font-weight: 700; /*Densidade da fonte*/
+}
+
+/*Configurando o proprio mapa, com a classe do link leaflet*/
+.map-container .leaflet-container{
+    border-bottom: 1px solid #dde3f0; /*Borda embaixo*/
+    border-radius: 2rem; /*Arredonda o mapa*/
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Responsavel pelo @media / Objetivo de adequar a aplicação dependendo da tela-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar um orfanato| Happy</title>
+
+    <!--Leafleft - CSS do mapa a ser inserido-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
+    <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="icon" href="./public/images/logo-icon.png" />
+
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/animations.css" />
+    <!--Um link somente para barra lateral, comum em algumas paginas-->
+    <link rel="stylesheet" href="./public/css/sidebar.css" />
+    <!--Um link somente para o mapa, comum em algumas paginas-->
+    <link rel="stylesheet" href="./public/css/map.css" />
+    <!--Um link somente para o formulário-->
+    <link rel="stylesheet" href="./public/css/form.css" />
+    <!--Um link somente para o botão, pois tem design em comum-->
+    <link rel="stylesheet" href="./public/css/buttons.css"/>
+    <link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page-create-orphanage">
+      <!--Barra Lateral-->
+      <aside class="animate-right sidebar">
+        <!--Logo na barra lateral-->
+        <img src="./public/images/map-marker.svg" alt="Happy" />
+
+        <!--Rodapé da barra lateral-->
+        <footer>
+          <!--Botão de voltar-->
+          <!--Estratégia JS aplicado direto no botão-->
+          <!-- onclick para quando clicar, será executado uma função-->
+          <!-- history é um objeto que consegue saber o historico de navegação-->
+          <!-- Esse objeto tem uma metodo back que permiti voltar na navegação anterior ao clicar-->
+          <button onclick="history.back()">
+            <img src="./public/images/arrow-back.svg" alt="Voltar" />
+          </button>
+        </footer>
+      </aside>
+
+      <!--Conteudo da página-->
+      <main class="animate-appear with-sidebar">
+        <!-- Inseri uma animação -->
+        <!--Adicionando um bloco de formulário-->
+        <form action="">
+          <!--FIELDSET DADOS-->
+          <!--Dentro de form existe o fieldset, que monta pequenos blocos-->
+          <!--Cada fieldset tem em seguida um legend-->
+          <fieldset>
+            <legend>Dados</legend>
+
+            <!--Mapa-->
+            <div class="map-container">
+              <!--Declara o mapa-->
+              <div id="mapid"></div>
+
+              <!--Rodapé do mapa-> Clique no mapa...-->
+              <footer>
+                <a href="#" id="select-point">
+                  Clique no mapa para adicionar a localização
+                </a>
+              </footer>
+            </div>
+
+            <!--CAMPO NOME-->
+            <!--Campos de input- Agrupamento para campos de entrada-->
+            <div class="input-block">
+              <!--Campo de nome -> mesmo id será para o for-->
+              <!--O label será onde é colocado a visualização nome-->
+              <!--O label pertence ao input devido ao id e for-->
+              <label for="name">Nome</label>
+              <!--Entrada de dados, o name="name" serve para referenciar no backend-->
+              <input id="name" name="name" />
+            </div>
+
+            <!--CAMPO SOBRE-->
+            <!--Campos de input- Agrupamento para campos de entrada-->
+            <div class="input-block">
+              <!--Uso da tag span -> tag inline, isto é, fica na mesma linha do Sobre-->
+              <label for="about"
+                >Sobre <span>Máximo de 300 catacteres</span>
+              </label>
+              <!--Entrada de dados, o name="about" serve para referenciar no backend-->
+              <!--O input não tem um campo para digitar multilinhas, assim se faz necessario
+              utilizar o textArea -->
+              <textarea id="about" name="about"> </textarea>
+            </div>
+
+            <!--CAMPO NUMERO WHATSAPP-->
+            <div class="input-block">
+              <label for="whatsapp">Número de Whatsapp</label>
+              <!--Entrada de dados, o name="whatsapp" serve para referenciar no backend-->
+              <input id="whatsapp" name="whatsapp" />
+            </div>
+
+            <!--CAMPO FOTOS-->
+            <div class="input-block images">
+              <!--Ex: Nos blocos anteriores, quando clica em cima do texto nome,
+                  o bloco já é selecionado devido a conexão do for da label com input.
+                  Assim o label não terá realmente sua funcionalidade igual foi visto
+                  nos blocos anteriores -->
+              <label for="images">Fotos</label>
+              <!--Bloco do upload-->
+              <div class="images-upload" id="images">
+                
+                <!--Lista de imagens-->
+                <div class="new-upload">
+                    <!--O placeholder é uma propriedade para colocar um texto dentro do input-->
+                    <input name="images" placeholder="Cole o link da foto aqui" />
+                    <!--span é uma tag inline para ficar na mesma linha-->
+                    <span>
+                      <img src="./public/images/remove-file.svg" alt="Remover foto">
+                    </span>
+                </div>
+                
+                
+                
+              </div>
+
+              <!--Botão de plus-->
+              <!-- Um botão dentro do formulario vai querer enviar o formulário-->
+              <!-- Por isso deve-se informar que o type é igual a button-->
+              <button type="button">
+                <img src="./public/images/add-file.svg" alt="Nova imagem" />
+              </button>
+            </div>
+          </fieldset>
+
+          <!--FIELD - VISITAÇÃO- Bloco de visitação-->
+          <fieldset>
+            <legend>Visitação</legend>
+
+            <!--CAMPO INSTRUÇÕES-->
+            <!--Campos de input- Agrupamento para campos de entrada-->
+            <div class="input-block">
+              <label for="instructions">Instruções</label>
+              <!--Entrada de dados, o name="instructions" serve para referenciar no backend-->
+              <!--O input não tem um campo para digitar multilinhas, assim se faz necessario
+              utilizar o textArea -->
+              <textarea id="instructions" name="instructions"> </textarea>
+            </div>
+
+            <!--CAMPO HORARIO DAS VISITAS-->
+            <!--Campos de input- Agrupamento para campos de entrada-->
+            <div class="input-block">
+              <label for="opening_hours">Horário das visitas</label>
+              <!--Entrada de dados, o name="opening_hours" serve para referenciar no backend-->
+              <input id="opening_hours" name="opening_hours" />
+            </div>
+
+            <!--ATENDE FIM DE SEMANA-->
+            <div class="input-block">
+              <label for="open_on_weekends">Atende fim de semana?</label>
+              <!--Entrada de dados, o name="open_on_weekends" serve para referenciar no backend-->
+              <!--Tipo de input é escondido, então o campo nao aparece-->
+              <!-- O value 1 é para indicar verdadeiro por padrão e esta escondido-->
+              <!-- Iremos alterar o value via JS-->
+              <input
+                type="hidden"
+                id="open_on_weekends"
+                name="open_on_weekends"
+                value="1" 
+              />
+
+              <!--O input vai receber o parametro via Javascript de qual foi selecionado, 
+              SIM OU NÃO, mas esse bloco ficará responsavel pela estetica do botão-->
+              <div class="button-select">
+                <!--Devido a estar em um formulario, tem que indicar type="button", para não enviar o formulário-->
+                <!--Tem uma class active pois o selecionado terá uma cor diferente-->
+                <button type="button" class="active">Sim</button>
+                <button type="button" >Não</button>                
+              </div>
+
+              <!--Botão de confirmar-->
+              <!-- Tipo do botão é de enviar o formulário-->
+              <button type= "submit" class= "primary-button">
+                Confirmar
+              </button>
+
+            </div>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+
+    <!--JS recomendado ser o ultimo elemento a ser chamado-->
+    <script src="./public/scripts/page-create-orphanage.js"></script>
+  </body>
+</html>

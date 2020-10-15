@@ -1,0 +1,28 @@
+#page-create-orphanage{
+    display: flex; /*Flexibiliza os elementos presentes*/
+    min-height: 100vh; /*Altura minima*/
+}
+
+/*Conteudo da página*/
+main{
+    flex: 1; /*Flex 1 faz com que o main ocupe todo espaço disponivel para ele, fazendo com que o
+    o margin:auto funcione*/
+    /*É possivel aplicar o flex:1  devido ao page orphanages ter o display:flex*/
+}
+
+/*Bloco Mapa (Mapa e rodapé) - Configuração especifica*/
+.map-container{
+    margin: 0 0 4rem; /*Margem somente embaixo*/
+}
+
+/*Especificamente o mapa dentro do bloco*/
+.map-container .leaflet-container{
+    border-radius: 20px 20px 0 0; /*Arredondar laterais superiores, e laterais embaixo*/
+}
+
+/*Rodapé do mapa*/
+.map-container footer{
+    background-color: #F5F8FA;
+    border-radius: 0 0 20px 20px; /*Arredondando as partes inferiores*/
+}
+

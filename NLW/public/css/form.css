@@ -1,0 +1,108 @@
+
+/*CSS aplicado ao formulário todo -> Parte dentro do main*/
+form{
+    width:70rem; /*Largura*/
+    margin: 6.4rem auto; /*Margens -> Topo de 64px e automatico no resto*/
+    background: white; /*Cor do bloco*/
+    border: 1px solid #D3E2E5; /*border: tamanho estilo cor*/
+    border-radius: 2rem; /*Arredondamento de borda*/
+
+    overflow:hidden; /*A imagem esta transbordando a caixa, assim aplica isso*/
+
+    padding: 8rem; /*Preenchimento*/
+}
+
+/*Todo bloco do formulário*/
+fieldset{
+    border: 0; /*Sem borda */
+}
+
+/*Refere-se aos dois titulos dos blocos (Dados, Visitação)*/
+fieldset legend{
+    width: 100%; /*Largura*/
+    font-size: 3.2rem; /*Tamanho da fonte*/
+    line-height: 1.5; /*Altura da linha*/
+     
+    color: #5c8599; /*Cor da fonte*/
+    font-weight: 700; /*Peso da fonte*/
+
+    border-bottom: 1px solid #d3e2e5;/*Borda abaixo, como se fosse uma linha*/
+    /*Margem é o espaçamento fora da caixa
+    O padding é o preenchimento interno da caixa legend*/
+    
+    margin-bottom: 4rem;/*Espaço abaixo do texto*/
+    padding: 2.4rem;/*Preenchimento*/
+}   
+
+/*Pega o irmão, segundo fieldset -> Visitação*/
+fieldset + fieldset{
+    margin-top: 8rem; /*Uma margem acima do visitação*/
+}
+
+/*Tirando o primeiro input block, o restante dos irmaos receberá o CSS*/
+.input-block + .input-block {
+    margin-top: 2.4rem; /*Margem acima*/
+}
+
+/*Refere-se a todos label dos blocos de entrada de texto*/
+.input-block label{
+    color: #8FA7B3; /*Cor das fontes*/
+    margin-bottom: .8rem; /*Margem abaixo*/
+    line-height: 1.5; /*Altura da linha*/
+}
+
+/*Máximo de 300 catacteres*/
+.input-block label span{
+    font-size: 1.4rem; /*Tamanho da fonte*/
+    color: #8fa7b3; /*Cor*/
+    margin-left: 2.4rem; /*Espaçamento lateral esquerdo*/
+    line-height: 1.5; /*Altura da linha*/
+}
+
+/*Aplicar a todos campos de texto*/
+.input-block input,
+.input-block textarea {
+    width: 100%; /*Largura*/
+    background: #F5F8FA; /*Cor de fundo*/
+
+    border: 1px solid #d3e2e5; /*Borda*/
+    border-radius: 2rem; /*Arredondar todas as bordas*/
+
+    color: #5c8599; /*Cor do texto ao digitar na caixa*/
+
+    /*Caso não queria mostrar a caixa marcando quando for digitar, utilize abaixo*/    
+    /*outline: none;*/
+    /*Não foi utilizado devido a acessibilidade*/
+
+}
+
+/*Especificamente o campo de nome e whats*/
+.input-block input{
+    height: 6.4rem; /*Altura dos campos*/
+    padding: 0 1.6rem;/*Preenchimento dentro*/
+}
+
+/*Especificamente o campo Sobre*/
+.input-block textarea{
+    height: clamp(12rem, 16rem, 24rem); /*Altura dos campos de maneira flexivel*/
+    /*O textarea tem uma propriedade chamada resize, que permiti ficar mudando no site 
+      o tamanho da caixa sobre*/
+      resize: vertical; /*Só pode mudar a caixa verticalmente*/
+
+      padding: 1.6rem; /*Preenchimento dentro do campo Sobre*/
+      line-height: 2.8rem; /*Altura da linha*/
+}
+
+
+/*Botão da seção de fotos +*/
+.input-block.images button{
+    border: 1px dashed #96D2F0; /*Borda (dashed é pontilhado)*/
+    width: 100%; /*Largura*/
+    background: #f5f8fa; /*Cor de fundo do botão*/
+    height: 6.4rem; /*Altura do botao*/
+    padding: 0 1.6rem; /*Preenchimento interno*/
+    margin-top: 2.4rem; /*Espaçamento externo*/
+    border-radius: 2rem; /*Arredondar*/
+
+    cursor: pointer; /*Modifica o cursor*/
+}
