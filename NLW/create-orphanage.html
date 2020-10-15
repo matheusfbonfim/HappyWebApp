@@ -94,7 +94,10 @@
               <!--O label pertence ao input devido ao id e for-->
               <label for="name">Nome</label>
               <!--Entrada de dados, o name="name" serve para referenciar no backend-->
-              <input id="name" name="name" />
+              <!--Campos require são obrigatorios, e manda mensagem se não colocar-->
+              <!-- Com required, é possivel usar .input-block input:valid-->
+              <!-- Assim quando preenchido, ele estara valido e assim muda a cor da borda-->
+              <input id="name" name="name" required/>
             </div>
 
             <!--CAMPO SOBRE-->
@@ -107,14 +110,14 @@
               <!--Entrada de dados, o name="about" serve para referenciar no backend-->
               <!--O input não tem um campo para digitar multilinhas, assim se faz necessario
               utilizar o textArea -->
-              <textarea id="about" name="about"> </textarea>
+              <textarea id="about" name="about" required> </textarea>
             </div>
 
             <!--CAMPO NUMERO WHATSAPP-->
             <div class="input-block">
               <label for="whatsapp">Número de Whatsapp</label>
               <!--Entrada de dados, o name="whatsapp" serve para referenciar no backend-->
-              <input id="whatsapp" name="whatsapp" />
+              <input id="whatsapp" name="whatsapp" required />
             </div>
 
             <!--CAMPO FOTOS-->
@@ -130,15 +133,11 @@
                 <!--Lista de imagens-->
                 <div class="new-upload">
                     <!--O placeholder é uma propriedade para colocar um texto dentro do input-->
-                    <input name="images" placeholder="Cole o link da foto aqui" />
+                    <input name="images" placeholder="Cole o link da foto aqui" required/>
                     <!--span é uma tag inline para ficar na mesma linha-->
-                    <span>
-                      <img src="./public/images/remove-file.svg" alt="Remover foto">
-                    </span>
-                </div>
-                
-                
-                
+                    <span><img src="./public/images/remove-file.svg" alt="Remover foto"></span>
+                </div> 
+
               </div>
 
               <!--Botão de plus-->
@@ -161,7 +160,7 @@
               <!--Entrada de dados, o name="instructions" serve para referenciar no backend-->
               <!--O input não tem um campo para digitar multilinhas, assim se faz necessario
               utilizar o textArea -->
-              <textarea id="instructions" name="instructions"> </textarea>
+              <textarea id="instructions" name="instructions" required> </textarea>
             </div>
 
             <!--CAMPO HORARIO DAS VISITAS-->
@@ -169,7 +168,7 @@
             <div class="input-block">
               <label for="opening_hours">Horário das visitas</label>
               <!--Entrada de dados, o name="opening_hours" serve para referenciar no backend-->
-              <input id="opening_hours" name="opening_hours" />
+              <input id="opening_hours" name="opening_hours" required/>
             </div>
 
             <!--ATENDE FIM DE SEMANA-->
@@ -184,6 +183,7 @@
                 id="open_on_weekends"
                 name="open_on_weekends"
                 value="1" 
+                required
               />
 
               <!--O input vai receber o parametro via Javascript de qual foi selecionado, 

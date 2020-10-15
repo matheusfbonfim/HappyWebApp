@@ -82,6 +82,14 @@ fieldset + fieldset{
     padding: 0 1.6rem;/*Preenchimento dentro*/
 }
 
+/*Quando os blocos estiverem preenchidos, mudar de cor*/
+/*Possivel usar nos input ou textare que tiverem required*/
+.input-block input:valid,
+.input-block textarea:valid{
+    border: 1px solid #A1E9C5; /*Mudança na borda*/
+}
+
+
 /*Especificamente o campo Sobre*/
 .input-block textarea{
     height: clamp(12rem, 16rem, 24rem); /*Altura dos campos de maneira flexivel*/
@@ -105,4 +113,29 @@ fieldset + fieldset{
     border-radius: 2rem; /*Arredondar*/
 
     cursor: pointer; /*Modifica o cursor*/
+}
+
+/*--Lista de imagens--*/
+.new-upload{
+    position: relative;
+}
+
+/*Botão de remover*/
+.new-upload span{
+    position: absolute; /*Absoluto na caixa new upload devido a new upload ter position relative  */
+    right: 12px; /*Posição para Direita*/
+    bottom: 14px; /*Para baixo*/
+
+    display:flex; /*Alinhar*/
+    padding: .6rem; /*Preenchimento interno*/
+
+    cursor:pointer; /*Mudança no mouse*/
+
+    /*Figma*/
+    background: #FFFFFF; /*Cor*/
+    border: 1px solid #D3E2E5; 
+    box-sizing: border-box;
+    border-radius:10px;
+
+
 }
