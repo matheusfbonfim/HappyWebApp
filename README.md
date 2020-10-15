@@ -1,7 +1,7 @@
 <!-- Figura de capa -->
 
 <h1 align="center">
-    <img alt="NextLevelWeek" title="#NextLevelWeek" src=".github/happy.png" width="1000px" />
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src=".github/capa_happy.png" width="1000px" />
 </h1>
 
 <p align="center">
@@ -20,7 +20,7 @@
 - Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos, permitindo tornar o dia das crianças mais especial.
 
 <h1 align="center">
-    <img alt="Example" title="Example" src="assets/Home.svg" width="500px" />
+    <img alt="Example" title="Example" src=".github/happy.png" width="500px">
 </h1>
 
 ## 📸 Screenshots
