@@ -1,7 +1,7 @@
 <!-- Figura de capa -->
 
 <h1 align="center">
-    <img alt="NextLevelWeek" title="#NextLevelWeek" src="assets/capa_happy.png" width="1000px" />
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src=".github/happy.png" width="1000px" />
 </h1>
 
 <p align="center">
