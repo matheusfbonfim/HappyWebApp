@@ -8,6 +8,7 @@
 body {
   height: 100vh;
   color: white;
+  background: #EBF2F5;/*Cor de fundo*/
 }
 
 /*Tamanhos de fontes flexivel - em rem*/

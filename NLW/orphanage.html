@@ -7,16 +7,21 @@
     <title>Lar das meninas | Happy</title>
 
     <!--Leafleft - CSS do mapa a ser inserido-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
 
-     <!-- Make sure you put this AFTER Leaflet's CSS -->
-     <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
-     <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
+    <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
 
     <link rel="icon" href="./public/images/logo-icon.png" />
 
@@ -32,44 +37,59 @@
   <body>
     <div id="page-orphanage">
       <!--Barra Lateral-->
-      <aside class="animate-right">
+      <aside class="animate-right sidebar">
+        <!--Logo na barra lateral-->
+        <img src="./public/images/map-marker.svg" alt="Happy">
+        
+        <!--Rodapé da barra lateral-->
+        <footer>
+          <!--Botão de voltar-->
+          <!--Estratégia JS aplicado direto no botão-->
+          <!-- onclick para quando clicar, será executado uma função-->
+          <!-- history é um objeto que consegue saber o historico de navegação-->
+          <!-- Esse objeto tem uma metodo back que permiti voltar na navegação anterior ao clicar-->
+          <button onclick= "history.back()">
+            <img src="./public/images/arrow-back.svg" alt="Voltar">
+          </button>
+        </footer>
         
       </aside>
 
       <!--Conteudo da página-->
-      <main>
-        <div id="orphanage-details">
+      <main class="animate-appear with-sidebar"> <!-- Inseri uma animação -->
+        <div class="orphanage-details">
           <!--Imagem maior-->
-          <img src= "./public/images/home.jpg" alt= "Lar das meninas">
+          <img src="./public/images/home.jpg" alt="Lar das meninas" />
 
           <!--Sequência de imagens-->
           <div class="images">
             <!--Cria um botão-->
-            <button class='active' type= "button">
-              <img src="./public/images/home.jpg" alt="Lar das meninas"> <!--Uma imagem como se fosse um botão-->
+            <button onclick ="selectImage(event)" class="active" type="button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas" />
+              <!--Uma imagem como se fosse um botão-->
             </button>
 
-            <button type= "button">
-              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            <!--Cada botao esta recebendo uma função para o evento do click-->
+
+            <button onclick ="selectImage(event)" type="button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas" />
             </button>
 
-            <button type= "button">
-              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            <button onclick ="selectImage(event)" type="button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas" />
             </button>
 
-            <button type= "button">
-              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            <button onclick ="selectImage(event)" type="button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas" />
             </button>
 
-            <button type= "button">
-              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            <button onclick ="selectImage(event)" type="button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas" />
             </button>
 
-            <button type= "button">
-              <img src="./public/images/home.jpg" alt="Lar das meninas"> 
+            <button onclick ="selectImage(event)" type="button">
+              <img src="./public/images/home.jpg" alt="Lar das meninas" />
             </button>
-
-
           </div>
 
           <!--Titulo, informações, conteudo abaixo das imagens-->
@@ -77,14 +97,14 @@
             <h1>Lar das meninas</h1>
 
             <p>
-              Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.
+              Presta assistência a crianças de 06 a 15 anos que se encontre em
+              situação de risco e/ou vulnerabilidade social.
             </p>
-            
+
             <!--Divisão que conterá o bloco do Mapa-->
             <div class="map-container">
-              <div id="mapid">
-
-              </div>
+              <!--Divisão para colocar o mapa-->
+              <div id="mapid"></div>
 
               <!--Rodapé do mapa-->
               <footer>
@@ -93,36 +113,45 @@
             </div>
 
             <!--Linha que divide o mapa de intruções-->
-            <hr>
+            <hr />
 
             <h2>Instruções para visita</h2>
 
-            <p>Venha como se sentir a vontade e traga muito amor e paciência para dar.</p>
+            <p>
+              Venha como se sentir a vontade e traga muito amor e paciência para
+              dar.
+            </p>
 
             <!-- Bloco de informações de abertura do orfanato-->
             <div class="open-details">
               <!--Bloco que informa o horário de atendimento-->
               <div class="hour">
-                
+                <img src="./public/images/clock.svg" alt="Horários" />
+                Horário de visitas Das 18h até 8h
               </div>
 
               <!--Bloco que informa os dias de atendimento-->
               <div class="open-on-weekends">
-
+                <img src="./public/images/info.svg" alt="Informações" />
+                Atendemos fim de semana
               </div>
 
             </div>
 
-
+            <!--Botão de contato-->
+            <button class="primary-button" type="button">
+              <img
+                src="./public/images/whatsapp.svg"
+                alt="Chamar no whatsapp"
+              />
+              Entrar em contato
+            </button>
           </div>
-
         </div>
       </main>
-
     </div>
 
     <!--JS recomendado ser o ultimo elemento a ser chamado-->
     <script src="./public/scripts/page-orphanage.js"></script>
-
   </body>
 </html>
