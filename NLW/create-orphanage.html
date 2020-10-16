@@ -34,7 +34,7 @@
     <!--Um link somente para o formulário-->
     <link rel="stylesheet" href="./public/css/form.css" />
     <!--Um link somente para o botão, pois tem design em comum-->
-    <link rel="stylesheet" href="./public/css/buttons.css"/>
+    <link rel="stylesheet" href="./public/css/buttons.css" />
     <link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
 
     <link
@@ -80,8 +80,8 @@
 
               <!--Inputs escondidos com intuito de obter latitude e longitude-->
               <!-- EM JS irá pegar esses campos escondidos e colocar valores nele-->
-              <input type="hidden" name="lat">
-              <input type="hidden" name="lng">
+              <input type="hidden" name="lat" />
+              <input type="hidden" name="lng" />
 
               <!--Rodapé do mapa-> Clique no mapa...-->
               <footer>
@@ -102,7 +102,7 @@
               <!--Campos require são obrigatorios, e manda mensagem se não colocar-->
               <!-- Com required, é possivel usar .input-block input:valid-->
               <!-- Assim quando preenchido, ele estara valido e assim muda a cor da borda-->
-              <input id="name" name="name" required/>
+              <input id="name" name="name" required />
             </div>
 
             <!--CAMPO SOBRE-->
@@ -134,21 +134,36 @@
               <label for="images">Fotos</label>
               <!--Bloco do upload-->
               <div class="images-upload" id="images">
-                
-                <!--Lista de imagens-->
-                <div class="new-upload">
-                    <!--O placeholder é uma propriedade para colocar um texto dentro do input-->
-                    <input name="images" placeholder="Cole o link da foto aqui" required/>
-                    <!--span é uma tag inline para ficar na mesma linha-->
-                    <span><img src="./public/images/remove-file.svg" alt="Remover foto"></span>
-                </div> 
+                <!--Lista de imagens, sendo necessario duplicar ou acrescentar-->
+                <!--Aqui pode estar aparecendo somente um, mas tera varios campos iguais de fotos-->
+                <!--Javascript fara o processo de acrescentar mais blocos -->
+                <div class="new-upload" >
+                  <!--O placeholder é uma propriedade para colocar um texto dentro do input-->
+                  <input
+                    name="images"
+                    placeholder="Cole o link da foto aqui"
+                    required
+                  />
+                  <!-- span é uma tag inline para ficar na mesma linha-->
+                  <!-- Adiciona a funcionalidade de deletar ao clicar no botao para excluir -> JS-->
+                  <!-- O span passara o evento para o delete, mostrando qual elemento foi selecionado na page-->
+                  <!-- O evento mostra qual span ta clicando ele-->
+                  <span onclick = "deleteField(event)">
+                    <img
+                      src="./public/images/remove-file.svg"
+                      alt="Remover foto"
+                    />
+                  </span>
+                </div>
 
               </div>
 
               <!--Botão de plus-->
               <!-- Um botão dentro do formulario vai querer enviar o formulário-->
               <!-- Por isso deve-se informar que o type é igual a button-->
-              <button type="button">
+              <!-- Quando clicar no botao, deve chamar a função JS, para isso basta colocar onclick-->
+              <button onclick = "addPhotoField()" 
+               type="button">
                 <img src="./public/images/add-file.svg" alt="Nova imagem" />
               </button>
             </div>
@@ -165,7 +180,8 @@
               <!--Entrada de dados, o name="instructions" serve para referenciar no backend-->
               <!--O input não tem um campo para digitar multilinhas, assim se faz necessario
               utilizar o textArea -->
-              <textarea id="instructions" name="instructions" required> </textarea>
+              <textarea id="instructions" name="instructions" required>
+              </textarea>
             </div>
 
             <!--CAMPO HORARIO DAS VISITAS-->
@@ -173,7 +189,7 @@
             <div class="input-block">
               <label for="opening_hours">Horário das visitas</label>
               <!--Entrada de dados, o name="opening_hours" serve para referenciar no backend-->
-              <input id="opening_hours" name="opening_hours" required/>
+              <input id="opening_hours" name="opening_hours" required />
             </div>
 
             <!--ATENDE FIM DE SEMANA-->
@@ -187,7 +203,7 @@
                 type="hidden"
                 id="open_on_weekends"
                 name="open_on_weekends"
-                value="1" 
+                value="1"
                 required
               />
 
@@ -197,15 +213,12 @@
                 <!--Devido a estar em um formulario, tem que indicar type="button", para não enviar o formulário-->
                 <!--Tem uma class active pois o selecionado terá uma cor diferente-->
                 <button type="button" class="active">Sim</button>
-                <button type="button" >Não</button>                
+                <button type="button">Não</button>
               </div>
 
               <!--Botão de confirmar-->
               <!-- Tipo do botão é de enviar o formulário-->
-              <button type= "submit" class= "primary-button">
-                Confirmar
-              </button>
-
+              <button type="submit" class="primary-button">Confirmar</button>
             </div>
           </fieldset>
         </form>

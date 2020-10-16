@@ -120,6 +120,11 @@ fieldset + fieldset{
     position: relative;
 }
 
+/*Tirando o primeiro newupload, todos terão margem acima*/
+.new-upload + .new-upload {
+    margin-top: 2.4rem;
+}
+
 /*Botão de remover*/
 .new-upload span{
     position: absolute; /*Absoluto na caixa new upload devido a new upload ter position relative  */
