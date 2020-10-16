@@ -1,4 +1,5 @@
-<!-- Figura de capa -->
+<!-- CAPA -->
+
 <!-- 
 <h1 align="center">
     <img alt="NextLevelWeek" title="#NextLevelWeek" src=".github/capa_happy.png" width="1000px" />
@@ -10,6 +11,7 @@
 </h1>
 
 
+<!--INDEX-->
 <p align="center">
   <a href="#-sobre-o-projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -18,6 +20,15 @@
   <a href="#-como-executar-o-projeto">Como executar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
+
+<!--INDICATIVOS-->
+<p align="center">
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E6&labelColor=121214" alt="License">
+
+  <img src="https://img.shields.io/github/stars/matheusfbonfim/happy?label=stars&message=MIT&color=8257E6&labelColor=121214" alt="License">  
+</p>
+
+<br>
 
 <!-- Tópicos -->
 
