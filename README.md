@@ -1,8 +1,14 @@
 <!-- Figura de capa -->
-
+<!-- 
 <h1 align="center">
     <img alt="NextLevelWeek" title="#NextLevelWeek" src=".github/capa_happy.png" width="1000px" />
 </h1>
+-->
+
+<h1 align="center">
+    <img alt="Happy" title="Happy" src=".github/logo.svg" />
+</h1>
+
 
 <p align="center">
   <a href="#-sobre-o-projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
