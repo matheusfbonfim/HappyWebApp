@@ -42,8 +42,9 @@ Você pode visualizar o layout do projeto através do link abaixo:
 
 This project was developed with the following technologies:
 
-- **Web**
-  - [Leaflet](https://leafletjs.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [SQLite](https://www.sqlite.org/index.html)
 <!-- - [Expo][expo] -->
 
 ## ⛏ Tools
