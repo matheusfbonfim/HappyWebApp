@@ -20,7 +20,7 @@
 - Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos, permitindo tornar o dia das crianças mais especial.
 
 <h1 align="center">
-    <img alt="Example" title="Example" src=".github/happy.png" width="500px">
+  <img alt="Happy" src=".github/happy.png" width="100%">
 </h1>
 
 ## 📸 Screenshots
