@@ -105,7 +105,7 @@ function deleteField(event){
     //console.log(fieldsContainer.length) // Mostrar quantos elementos de new upload existem
     
     // A função retorna nenhuma funcionalidade de deletar, se tiver somente um elemento
-    if(fieldsContainer.length <= 1){
+    if(fieldsContainer.length < 2){
         // A funcionalidade opcional, é tendo somente um elemento
         // Limpar o campo desse elemento se clicado no delete
         // Vai no span, remete a raiz dele com parentNode, voltando para o bloco principal div
@@ -123,4 +123,45 @@ function deleteField(event){
     span.parentNode.remove();
 }
 
+// Select yes or no
+/* Mudança da class active para o botao selecionado */
+// Toggle - Alternância
+function toggleSelect(event){
+    // Retirar a class.active dos botões 
+    /* Irar procurar todos os botoes dentro do bloco button-selection*/
+    /* Retorna uma Nodelist com os dois botões -> document.querySelectorAll(".button-select button")*/
+    /* Sendo uma lista basta percorrer cada elemento eliminando as classes active */
+    /* Para percorrer usa-se o forEach */
+    /* Dentro de cada elemento(botão), têm-se a classList, que mostra as classes presentes*/
+    /* Basta colocar o remove na classe especifica -> active */
+    document.querySelectorAll(".button-select button")
+    .forEach((button)=>{
+        button.classList.remove("active");
+    })
     
+    //console.log(document.querySelectorAll(".button-select button")) //Testes
+    
+
+    // Colocar a class .active no botão clicado
+    // Apos tirar todos class active dos botoes, segue-se a ordem:
+    /* 1: Armazena em const o botao que esta clicado */
+    /* 2: Dado que tenha o bloco button retornado, basta pegar a lista de classes ->classList */
+    /* 3: E com a classList utilizar o add para adicionar uma classe ao botao clicado */
+    const button_click = event.currentTarget // Retorna o botão clicado <button>....
+    button_click.classList.add("active");
+
+    // Atualizar o input hidden com o valor selecionado
+    /* O input hidden tem o um nome especificado -> open_on_weekends */
+    /* Com esse nome, é feito uma busca por esse input pelo nome */
+    const input = document.querySelector('[name="open_on_weekends"]') // Retorna a tag input
+
+    //console.log(input)
+
+    /* Cada botão tem um data-value para indicar se é sim ou nao*/
+    /* Basta aplicar esse valor ao input*/
+    /* Com o data-value nos botões,basta acessar o atributo especifico, com .dataset.value */
+    input.value = button_click.dataset.value;
+    /* Para ver esta ultima funcionalidade, basta preencher o formulario, colocando não para o
+       o valor e na url é possivel ver este parametro atribuido -> 
+       Ex: ...sadfdsafsda&open_on_weekends=0 */
+}   

@@ -109,8 +109,8 @@
             <!--Campos de input- Agrupamento para campos de entrada-->
             <div class="input-block">
               <!--Uso da tag span -> tag inline, isto é, fica na mesma linha do Sobre-->
-              <label for="about"
-                >Sobre <span>Máximo de 300 catacteres</span>
+              <label for="about">
+                Sobre <span>Máximo de 300 catacteres</span>
               </label>
               <!--Entrada de dados, o name="about" serve para referenciar no backend-->
               <!--O input não tem um campo para digitar multilinhas, assim se faz necessario
@@ -212,8 +212,19 @@
               <div class="button-select">
                 <!--Devido a estar em um formulario, tem que indicar type="button", para não enviar o formulário-->
                 <!--Tem uma class active pois o selecionado terá uma cor diferente-->
-                <button type="button" class="active">Sim</button>
-                <button type="button">Não</button>
+                <!-- Os dois buttons recebem a funcionalidade de ao clicar chamar o JS-->
+                <!-- Evento será retornado para o parametro, sendo utilizado para manipulações-->
+                <!-- Função irá colocar a class active no botao clicado (tem por padrão no sim)-->
+                <!-- Colocando a class active, irá mudar a cor-->
+                <!-- Para facilitar no JS, é colocado valores (data-value) para indicar o valor de sim ou nao dos botões-->
+                <button data-value="1"
+                  type="button"
+                  onclick="toggleSelect(event)"
+                  class="active">Sim</button>
+                <button data-value="0"
+                  type="button"
+                  onclick="toggleSelect(event)"
+                 >Não</button>
               </div>
 
               <!--Botão de confirmar-->
