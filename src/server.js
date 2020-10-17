@@ -32,6 +32,7 @@ server
 // Mesmo HTML não sendo linguagem de programação, o template ajuda ele ser praticamente uma
 // Na views sera buscado os arquivos da views
 // Esta configurando o caminho a ser seguido e foi preciso alterar os .htmls para .hbs
+// Preciso alterar todos HTML (rotas relativas) -> retirar o ./public e .html
 .set('views', path.join(__dirname, "views"))
 .set('view engine', 'hbs')
 

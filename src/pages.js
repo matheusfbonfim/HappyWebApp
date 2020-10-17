@@ -1,3 +1,6 @@
+// Modulo onde contém os dados de orfanatos
+const orphanages = require('./database/fakedata.js')
+
 /* Será utilizado o module exports para disponibilizar o uso da funções
    ou elementos aqui criados */
 
@@ -13,9 +16,8 @@ module.exports = {
 
     /* Função usada dentro do get como resposta para requisição */
     index(req,res){
-        const city = req.query.city
         // A resposta(response) vai renderizar a pagina usando o index (Uso da template engine)
-        return res.render('index', {city})
+        return res.render('index')
     },
 
     orphanage(req,res){
@@ -24,13 +26,15 @@ module.exports = {
     },
 
     orphanages(req,res){
-        // Tem como resposta a pagina orphanages renderizada    
-        return res.render('orphanages')
+        // Tem como resposta a pagina orphanages renderizada  
+        // Tem que enviar os dados para pagina orfanages
+        // Tem que importar o modulo de fakedata e passar como parametro 
+        return res.render('orphanages', {orphanages})
     },
 
     createOrphanage(req,res){
         // Tem como resposta a pagina create-orphanage renderizada
-        return res.render('create-orphanages')
+        return res.render('create-orphanage')
     }
 
 

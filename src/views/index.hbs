@@ -1,5 +1,9 @@
+<!-- Devido a configuração do hbs, nao tem mais caminhos absolutos,
+     somente /pasta ou /arquivos indo direto para o elemento,
+     não precisando colocar ./public .html ....-->
+
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <!-- Responsavel pelo @media / Objetivo de adequar a aplicação dependendo da tela-->
@@ -8,7 +12,7 @@
     
     <link rel="icon" href="/images/logo-icon.png" />
 
-    <!--O ./public foi retirado devido ao express ja fazer a rota para a pasta public automaticamente-->
+    <!--O  foi retirado devido ao express ja fazer a rota para a pasta public automaticamente-->
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/animations.css" />
     <link rel="stylesheet" href="/css/page-landing.css" />
@@ -26,7 +30,7 @@
             alt="Logomarca de Happy" />
 
           <div class="location animate-up">
-            <strong> {{city}} </strong>
+            <strong> Maringá </strong>
             <p>Paraná</p>
           </div>
         </header>
@@ -37,7 +41,7 @@
           <section class="visit">
             <p class="animate-up">Visite orfanatos e mude o dia de muitas crianças</p>
             
-            <a href="orphanages.html" title="Visite orfanatos" class="animate-up">
+            <a href="/orphanages" title="Visite orfanatos" class="animate-up">
               <img src="/images/arrow.svg" alt="Ir para o mapa" />
             </a>
           </section>
