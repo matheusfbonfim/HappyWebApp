@@ -1,5 +1,5 @@
 // Modulo onde contém os dados de orfanatos
-const orphanages = require('./database/fakedata.js')
+const orphanages = require('./database/fakedata.js');
 
 /* Será utilizado o module exports para disponibilizar o uso da funções
    ou elementos aqui criados */
@@ -27,9 +27,10 @@ module.exports = {
 
     orphanages(req,res){
         // Tem como resposta a pagina orphanages renderizada  
-        // Tem que enviar os dados para pagina orfanages
+        // Tem que enviar os dados para pagina orfanages (page-orphanages)
         // Tem que importar o modulo de fakedata e passar como parametro 
-        return res.render('orphanages', {orphanages})
+        // O segundo parametro esta passando os dados para o front-end
+        return res.render('orphanages', { orphanages })
     },
 
     createOrphanage(req,res){

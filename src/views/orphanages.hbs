@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Responsavel pelo @media / Objetivo de adequar a aplicação dependendo da tela-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Localize um orfanato | Happy</title>
 
-    <!--Leafleft - CSS do mapa a ser inserido-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+<head>
+  <meta charset="UTF-8" />
+  <!-- Responsavel pelo @media / Objetivo de adequar a aplicação dependendo da tela-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localize um orfanato | Happy</title>
+
+  <!--Leafleft - CSS do mapa a ser inserido-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
+    crossorigin="" />
 
-     <!-- Make sure you put this AFTER Leaflet's CSS -->
-     <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
-     <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
+  <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
-    <link rel="icon" href="/images/logo-icon.png" />
+  <link rel="icon" href="/images/logo-icon.png" />
 
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/animations.css" />
-    <link rel="stylesheet" href="/css/page-orphanages.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/page-orphanages.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="page-orphanages">
-      <!--Barra Lateral-->
-      <aside class="animate-right">
-        <header>
-          <!--Logo marca-->
-          <img src="/images/map-marker.svg" alt="Happy" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
 
-          <h2>Escolha um orfanato no mapa</h2>
- 
-          <p>Muitas crianças estão esperando sua visita :)</p>
-        </header>
+<body>
+  <div id="page-orphanages">
+    <!--Barra Lateral-->
+    <aside class="animate-right">
+      <header>
+        <!--Logo marca-->
+        <img src="/images/map-marker.svg" alt="Happy" />
 
-        <!--Rodapé-->
-        <footer>
-          <strong>Maringá</strong>
-          <p>Paraná</p>
-        </footer>
-      </aside>
+        <h2>Escolha um orfanato no mapa</h2>
 
-      <!--Mapa-->
-      <div id="mapid" class= "animate-appear"></div>
-      
-      <!--Botão de criar orfanato - tag a com link-->
-      <a href="/create-orphanage" class="create-orphanages" title="Cadastre um orfanato">
-        <img src="/images/plus.svg" alt="Criar orfanato"/>
-      </a>
+        <p>Muitas crianças estão esperando sua visita :)</p>
+      </header>
+
+      <!--Rodapé-->
+      <footer>
+        <strong>Maringá</strong>
+        <p>Paraná</p>
+      </footer>
+    </aside>
+
+    <!--Mapa-->
+    <div id="mapid" class="animate-appear"></div>
+
+    <!-- BLoco para poder referenciar no back end para pegar informações-->
+    <div class="orphanages">
+
+      <!-- Uma estrutura de repetição do template engine hbs-->
+      <!-- Para cada orphanage, terá um span com as informações-->
+      <!-- O each é como se fosse um for (para cada). Em cada loop para pegar os elementos usa-se this-->
+      {{#each orphanages}}
+
+        <!-- Span escondido, para ter as info necessarias para colocar orfanatos no mapa-->
+        <!-- Container para guardar informações--> 
+        <span hidden 
+          <!-- Necessario o id, pois cada orfanato tem um -->
+          <!-- Para guardar elementos é necessario colocar o data-.. -->
+          data-id="{{this.id}}"
+          data-name="{{this.name}}"
+          data-lat = "{{this.lat}}"
+          data-lng = "{{this.lng}}"
+        ></span>
+
+      {{/each}}
+
     </div>
 
-    <!--JS recomendado ser o ultimo elemento a ser chamado-->
-    <script src="/scripts/page-orphanages.js"></script>
 
-  </body>
+    <!--Botão de criar orfanato - tag a com link-->
+    <a href="/create-orphanage" class="create-orphanages" title="Cadastre um orfanato">
+      <img src="/images/plus.svg" alt="Criar orfanato" />
+    </a>
+  </div>
+
+  <!--JS recomendado ser o ultimo elemento a ser chamado-->
+  <script src="/scripts/page-orphanages.js"></script>
+
+</body>
+
 </html>
