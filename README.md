@@ -21,15 +21,15 @@
   <a href="#memo-license">License</a>
 </p>
 
+<h1 align="center">
+  <img alt="Happy" src=".github/happy.png" width="100%">
+</h1>
+
 <!-- Tópicos -->
 
 ## 💻 Sobre o projeto
 - Projeto desenvolvido durante o **[Next Level Week](https://nextlevelweek.com/)**, realizada pela **[@Rocketseat](https://github.com/Rocketseat)**.
 - Happy é um projeto desenvolvido com inspiração no dia das crianças. O objetivo é conectar as pessoas a orfanatos, permitindo tornar o dia das crianças mais especial 💜.
-
-<h1 align="center">
-  <img alt="Happy" src=".github/happy.png" width="100%">
-</h1>
 
 ## 📸 Screenshots
 

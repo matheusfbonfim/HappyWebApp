@@ -37,6 +37,4 @@ module.exports = {
         // Tem como resposta a pagina create-orphanage renderizada
         return res.render('create-orphanage')
     }
-
-
 }
