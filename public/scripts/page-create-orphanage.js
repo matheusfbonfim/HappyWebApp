@@ -165,3 +165,19 @@ function toggleSelect(event){
        o valor e na url é possivel ver este parametro atribuido -> 
        Ex: ...sadfdsafsda&open_on_weekends=0 */
 }   
+
+// Verifica se foi colocado um ponto no mapa, senão nao deixa enviar o formulário
+function validate(event){
+
+    const needsLatAndLng = false;
+
+    
+    // Validar se lat e lng estão preenchidos
+    if(needsLatAndLng){
+        // Faz não enviar o formulário
+        event.preventDefault();
+
+        // Mandar um alertar
+        alert('Selecione um ponto no mapa')
+    }
+}

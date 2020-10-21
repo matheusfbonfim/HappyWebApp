@@ -68,7 +68,7 @@
         <!--Adicionando um bloco de formulário-->
         <!-- Método do tipo post - A url não irá conter informações enviadas-->
         <!-- O post nao precisa fazer uma pagina nova, ele envia na mesma rota -->
-        <form action="save-orphanage" method="post">
+        <form action="save-orphanage" method="post" onsubmit="validate(event)">
           <!--FIELDSET DADOS-->
           <!--Dentro de form existe o fieldset, que monta pequenos blocos-->
           <!--Cada fieldset tem em seguida um legend-->
@@ -145,6 +145,7 @@
                     name="images"
                     placeholder="Cole o link da foto aqui"
                     required
+                    type = "url"
                   />
                   <!-- span é uma tag inline para ficar na mesma linha-->
                   <!-- Adiciona a funcionalidade de deletar ao clicar no botao para excluir -> JS-->
