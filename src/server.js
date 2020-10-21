@@ -53,4 +53,4 @@ server
 
 // Ligar o servidor
 // Listen() -> como se o servidor estivesse escutando, no caso uma porta
-server.listen(5504) // porta 5500
+server.listen(5500) // porta 5500

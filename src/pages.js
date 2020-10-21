@@ -1,5 +1,8 @@
-// Modulo onde contém os dados de orfanatos
-const orphanages = require('./database/fakedata.js');
+// Chamando o banco de dados a aplicação
+const Database = require('./database/db')
+
+// Utilizado para salvar no banco de dados 
+const saveOrphanage =  require('./database/saveOrphanage')
 
 /* Será utilizado o module exports para disponibilizar o uso da funções
    ou elementos aqui criados */
@@ -25,12 +28,25 @@ module.exports = {
         return res.render('orphanage')
     },
 
-    orphanages(req,res){
-        // Tem como resposta a pagina orphanages renderizada  
-        // Tem que enviar os dados para pagina orfanages (page-orphanages)
-        // Tem que importar o modulo de fakedata e passar como parametro 
-        // O segundo parametro esta passando os dados para o front-end
-        return res.render('orphanages', { orphanages })
+    // Devido a estar utilizando o await tem que usar async
+    async orphanages(req,res){
+        // Vai tentar isso aqui, e caso der errado, emitir mensagem
+        try {
+
+            // Devido ao await, pode-se chamar o banco diretamente, sem o then para ter retorno
+            const db = await Database;
+            // Tem como resposta a pagina orphanages renderizada  
+            // Tem que enviar os dados para pagina orfanages (page-orphanages)
+            // Tem que importar o modulo de fakedata e passar como parametro 
+            // O segundo parametro esta passando os dados para o front-end
+            const orphanages = await db.all("SELECT * FROM orphanages") 
+            return res.render('orphanages', { orphanages })
+
+        } catch(error) {
+            console.log(error)
+            return res.send("Erro no banco de dados")
+        }
+        
     },
 
     createOrphanage(req,res){

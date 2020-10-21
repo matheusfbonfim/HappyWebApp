@@ -12,14 +12,17 @@ Database.then(async (db) => {
     // Inserir dados na tabela (db.run -> Irá rodar um código) 
     // Irá rodar uma instrução SQLite
     // db é o banco de dados criado
-     await saveOrphanage(db, {
+    
+    await saveOrphanage(db, {
         //Latitude
         lat:"-23.4244096",
         //Longitude
-        lng:"-51.9518853",
+        lng:"-51.9418853",
         // Titulo/nome do orfanato
-        name: "Lar do amor",
-        description: "Presta assistência a crianças de 06 a 15 anos que se  encontre em situação de risco e/ou vulnerabilidade social.",
+        name: "Lar dos meninos",
+        // Sobre o orfanato
+        about: "Presta assistência a crianças de 06 a 15 anos que se  encontre em situação de risco e/ou vulnerabilidade social.",
+        whatsapp: "9859529",
         // Um array que contem as imagens (Imagens aleatorias de sites) 
         // Necessario passar toString para chegar no banco como string 
         images:[
@@ -35,10 +38,9 @@ Database.then(async (db) => {
         opening_hours:"Horário de visitas Das 18h até 8h",
 
         // Atende final de semana
-        open_on_weekends: "1"
-
+        open_on_weekends: "0"
     })
-
+    
     // Consultar dados da tabela
     // Funcionalidade db.all() é capaz de buscar todos os dados presentes no banco de DADOS
     // Pode colocar as informações em uma const
@@ -46,6 +48,10 @@ Database.then(async (db) => {
     console.log(selectedOrphanages)      
 
     // Consultar somente 1 orfanatos, pelo ID
-    const selectOrphanage = await db.all('SELECT * FROM orphanages WHERE id = "6"')
-    console.log(selectOrphanage)
+    //const selectOrphanage = await db.all('SELECT * FROM orphanages WHERE id = "6"')
+    //console.log(selectOrphanage)
+
+    // Deletar dado da tabela 
+    //console.log(await db.run("DELETE FROM orphanages WHERE id = '4'"))
+    //console.log(await db.run("DELETE FROM orphanages WHERE id = '5'"))
 })
