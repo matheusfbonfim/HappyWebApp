@@ -7,11 +7,16 @@ const options = {
     zoomControl: false, // Desabilitar o controle de zoom
 }
 
+// Pegando informação do banco de dados
+// Constantes para alterar a localização e posicao do mapa
+const lat = document.querySelector('span[data-lat]').dataset.lat; 
+const lng = document.querySelector('span[data-lng]').dataset.lng;
+
 
 // Inicializaremos o mapa e definiremos sua visualização para nossas coordenadas geográficas escolhidas e um nível de zoom:
 // O objeto L existe devido ao JS chamado no HTML
 // O parametro options colocará restrições ao criar o mapa 
-const map = L.map('mapid', options).setView([-23.4244096,-51.9418853],15);
+const map = L.map('mapid', options).setView([lat,lng],15);
 
 /* Primeira camada que irá receber o map */
 /* Depois adiciona a variavel map inicializada */
@@ -32,7 +37,7 @@ const icon = L.icon({
    - Em um local em Maringá, ficou @23.4244096,-51.9418853
 */
 L
-    .marker([-23.4244096,-51.9418853], { icon: icon })
+    .marker([lat, lng], { icon: icon })
     .addTo(map)
     
 

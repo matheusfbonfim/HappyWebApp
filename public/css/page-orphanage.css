@@ -123,6 +123,8 @@ os primeiros que aparecerem fora bloco)*/
     /*Se fosse mais que 2 frações, usar repeat(2 ou +,1fr)*/
     grid-template-columns: 1fr 1fr; /*Dividiu em dois espaçamento*/
     column-gap: 2rem; /*Espaçamento entre eles*/
+
+    line-height: 1.5; /*Altura das linhas*/
 }
 
 /*2 blocos*/
@@ -141,6 +143,7 @@ os primeiros que aparecerem fora bloco)*/
     border: 1px solid #B3DAE2;
     border-radius: 20px;
 
+
 }
 
 /*Imagens dentro do dois blocos*/
@@ -151,9 +154,21 @@ os primeiros que aparecerem fora bloco)*/
 
 /*Bloco que informa os dias de atendimento*/
 .open-details .open-on-weekends{
+    border-radius: 20px;
+}
+
+/*Caracteristicas para quando Atender fim de semana*/
+.open-on-weekends.open{
+    border: 1px solid #A1E9C5;
     color: #37C77F; /*Cor de fonte*/
     /*Caracteristicas do figma prontas*/
     background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
-    border: 1px solid #A1E9C5;
-    border-radius: 20px;
+}
+
+/*Caracteristicas para quando não Atender fim de semana*/
+.open-on-weekends.closed{
+    border: 1px solid #FFBCD4;
+    color: #FF999D; /*Cor de fonte*/
+    /*Caracteristicas do figma prontas*/
+    background: linear-gradient(154.16deg, #FCF0F4 7.85%, #FFFFFF 91.03%);
 }

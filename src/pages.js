@@ -23,9 +23,44 @@ module.exports = {
         return res.render('index')
     },
 
-    orphanage(req,res){
-        // Tem como resposta a pagina orphanage renderizada
-        return res.render('orphanage')
+    async orphanage(req,res){
+        // Para pegar o id da url, utiliza-se o query
+        const id = req.query.id
+        
+         try {
+            // Devido ao await, pode-se chamar o banco diretamente, sem o then para ter retorno
+            // Chama o banco de dados 
+            const db = await Database; 
+            // Seleciona especificamente um orfanato
+            // Para colocar a variavel id é preciso usar crase
+            const results = await db.all(`SELECT * FROM orphanages WHERE id = "${id}"`)
+            // orphanage[0] -> Pega somente o objeto, não o objeto dentro do array (que só tem 1 objeto)
+            //console.log(orphanage[0])
+            const orphanage = results[0]  
+
+            // As imagens estão indo no formato texto, assim é necessário fazer a mudança
+            // Tem que ir no formato array
+            orphanage.images = orphanage.images.split(',')
+            // Pega o link da primeira imagem
+            orphanage.firstImage = orphanage.images[0]
+
+            // Para colocar sobre o atendimento de fim de semana, tem que colocar
+            // transformar o open_on_weekends em booleano
+            if (orphanage.open_on_weekends == "0"){
+                orphanage.open_on_weekends = false
+            }else{
+                 orphanage.open_on_weekends = true
+            }
+
+            //orphanage_on_weekends == "0" ? false : true 
+
+
+            return res.render('orphanage', {orphanage}) 
+        } catch (error) {
+            // Mostrar o erro
+            console.log(error);
+            return res.send("Erro no banco de dados")
+        }
     },
 
     // Devido a estar utilizando o await tem que usar async

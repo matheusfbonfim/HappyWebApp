@@ -1,164 +1,158 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Responsavel pelo @media / Objetivo de adequar a aplicação dependendo da tela-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lar das meninas | Happy</title>
+<html lang="pt-br">
 
-    <!--Leafleft - CSS do mapa a ser inserido-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
+<head>
+  <meta charset="UTF-8" />
+  <!-- Responsavel pelo @media / Objetivo de adequar a aplicação dependendo da tela-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{orphanage.name}} | Happy</title>
 
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
-    <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
+  <!--Leafleft - CSS do mapa a ser inserido-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
 
-    <link rel="icon" href="/images/logo-icon.png" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <!-- Abaixo esta o JS e é obrigatório colocar depois do CSS -->
+  <!-- Geralmente o script fica por ultimo, mas nesse caso é necessário colocar-->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/animations.css" />
-    <!--Um link somente para barra lateral, comum em algumas paginas-->
-    <link rel="stylesheet" href="/css/sidebar.css" /> 
-    <!--Um link somente para o mapa, comum em algumas paginas-->
-    <link rel="stylesheet" href="/css/map.css" /> 
-    <!--Um link somente para o botão, pois tem design em comum-->
-    <link rel="stylesheet" href="/css/buttons.css"/>
-    <link rel="stylesheet" href="/css/page-orphanage.css" />
+  <link rel="icon" href="/images/logo-icon.png" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="page-orphanage">
-      <!--Barra Lateral-->
-      <aside class="animate-right sidebar">
-        <!--Logo na barra lateral-->
-        <img src="/images/map-marker.svg" alt="Happy">
-        
-        <!--Rodapé da barra lateral-->
-        <footer>
-          <!--Botão de voltar-->
-          <!--Estratégia JS aplicado direto no botão-->
-          <!-- onclick para quando clicar, será executado uma função-->
-          <!-- history é um objeto que consegue saber o historico de navegação-->
-          <!-- Esse objeto tem uma metodo back que permiti voltar na navegação anterior ao clicar-->
-          <button onclick= "history.back()">
-            <img src="/images/arrow-back.svg" alt="Voltar">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <!--Um link somente para barra lateral, comum em algumas paginas-->
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <!--Um link somente para o mapa, comum em algumas paginas-->
+  <link rel="stylesheet" href="/css/map.css" />
+  <!--Um link somente para o botão, pois tem design em comum-->
+  <link rel="stylesheet" href="/css/buttons.css" />
+  <link rel="stylesheet" href="/css/page-orphanage.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="page-orphanage">
+    <!--Barra Lateral-->
+    <aside class="animate-right sidebar">
+      <!--Logo na barra lateral-->
+      <img src="/images/map-marker.svg" alt="Happy">
+
+      <!--Rodapé da barra lateral-->
+      <footer>
+        <!--Botão de voltar-->
+        <!--Estratégia JS aplicado direto no botão-->
+        <!-- onclick para quando clicar, será executado uma função-->
+        <!-- history é um objeto que consegue saber o historico de navegação-->
+        <!-- Esse objeto tem uma metodo back que permiti voltar na navegação anterior ao clicar-->
+        <button onclick="history.back()">
+          <img src="/images/arrow-back.svg" alt="Voltar">
+        </button>
+      </footer>
+
+    </aside>
+
+    <!--Conteudo da página-->
+    <main class="animate-appear with-sidebar">
+      <!-- Inseri uma animação -->
+      <div class="orphanage-details">
+        <!--Imagem maior-->
+        <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}" />
+
+        <!--Sequência de imagens-->
+        <div class="images">
+          <!--Cria um botão-->
+          <!--Cada botao esta recebendo uma função para o evento do click-->
+          <!--Cada que vez que clicar em um botao, liberará uma ação-->
+          <!--Para cada será buscado uma imagem na nuvem-->
+          <!--Faz um laço for para colocar as imagens -->
+          {{#each orphanage.images}}
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="{{this}}" alt="{{orphanage.name}}" />
+            <!--Uma imagem como se fosse um botão-->
           </button>
-        </footer>
-        
-      </aside>
+          {{/each}}
 
-      <!--Conteudo da página-->
-      <main class="animate-appear with-sidebar"> <!-- Inseri uma animação -->
-        <div class="orphanage-details">
-          <!--Imagem maior-->
-          <img src="/images/home.jpg" alt="Lar das meninas" />
-
-          <!--Sequência de imagens-->
-          <div class="images">
-            <!--Cria um botão-->
-            <button onclick ="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=1" alt="Lar das meninas" />
-              <!--Uma imagem como se fosse um botão-->
-            </button>
-
-            <!--Cada botao esta recebendo uma função para o evento do click-->
-            <!--Cada que vez que clicar em um botao, liberará uma ação-->
-            <!--Para cada será buscado uma imagem na nuvem-->
-            <button onclick ="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=2" alt="Lar das meninas" />
-            </button>
-
-            <button onclick ="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=3" alt="Lar das meninas" />
-            </button>
-
-            <button onclick ="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=4" alt="Lar das meninas" />
-            </button>
-
-            <button onclick ="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=5" alt="Lar das meninas" />
-            </button>
-
-            <button onclick ="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=6" alt="Lar das meninas" />
-            </button>
-          </div>
-
-          <!--Titulo, informações, conteudo abaixo das imagens-->
-          <div class="orphanage-details-content">
-            <h1>Lar das meninas</h1>
-
-            <p>
-              Presta assistência a crianças de 06 a 15 anos que se encontre em
-              situação de risco e/ou vulnerabilidade social.
-            </p>
-
-            <!--Divisão que conterá o bloco do Mapa-->
-            <div class="map-container">
-              <!--Divisão para colocar o mapa-->
-              <div id="mapid"></div>
-
-              <!--Rodapé do mapa-->
-              <footer>
-                <a href="">Ver rotas no Google Maps</a>
-              </footer>
-            </div>
-
-            <!--Linha que divide o mapa de intruções-->
-            <hr />
-
-            <h2>Instruções para visita</h2>
-
-            <p>
-              Venha como se sentir a vontade e traga muito amor e paciência para
-              dar.
-            </p>
-
-            <!-- Bloco de informações de abertura do orfanato-->
-            <div class="open-details">
-              <!--Bloco que informa o horário de atendimento-->
-              <div class="hour">
-                <img src="/images/clock.svg" alt="Horários" />
-                Horário de visitas Das 18h até 8h
-              </div>
-
-              <!--Bloco que informa os dias de atendimento-->
-              <div class="open-on-weekends">
-                <img src="/images/info.svg" alt="Informações" />
-                Atendemos fim de semana
-              </div>
-
-            </div>
-
-            <!--Botão de contato-->
-            <button class="primary-button" type="button">
-              <img
-                src="/images/whatsapp.svg"
-                alt="Chamar no whatsapp"
-              />
-              Entrar em contato
-            </button>
-          </div>
         </div>
-      </main>
-    </div>
 
-    <!--JS recomendado ser o ultimo elemento a ser chamado-->
-    <script src="/scripts/page-orphanage.js"></script>
-  </body>
+        <!--Titulo, informações, conteudo abaixo das imagens-->
+        <div class="orphanage-details-content">
+          <h1>{{orphanage.name}}</h1>
+
+          <p>
+            {{orphanage.about}}
+          </p>
+
+          <!--Divisão que conterá o bloco do Mapa-->
+          <div class="map-container">
+            <!--Divisão para colocar o mapa-->
+            <div id="mapid"></div>
+
+            <!-- Passar as informações - uso da span-->
+            <span data-lat="{{orphanage.lat}}" , data-lng="{{orphanage.lng}}">
+            </span>
+
+            <!--Rodapé do mapa-->
+            <!--É um link especifico para ver no google -->
+            <!-- Para abrir em uma nova aba, use target-->
+            <footer>
+              <a target="_blank" href="https://maps.google.com/mobile?q={{orphanage.lat}},{{orphanage.lng}}&z=15">Ver
+                rotas no Google Maps</a>
+            </footer>
+          </div>
+
+          <!--Linha que divide o mapa de intruções-->
+          <hr />
+
+          <h2>Instruções para visita</h2>
+
+          <p>
+            {{orphanage.instructions}}
+          </p>
+
+          <!-- Bloco de informações de abertura do orfanato-->
+          <div class="open-details">
+            <!--Bloco que informa o horário de atendimento-->
+            <div class="hour">
+              <img src="/images/clock.svg" alt="Horários" />
+              {{orphanage.opening_hours}}
+            </div>
+
+            <!-- Para colocar a mensagem se atende ou não, temos que fazer uma condicional -->
+            <!-- open_on_weekends retorna 0 ou 1, e a template engine permite fazer a condicional-->
+            {{#if orphanage.open_on_weekends}}
+            <!--Bloco que informa os dias de atendimento-->
+            <div class="open-on-weekends open">
+              <img src="/images/info.svg" alt="Informações" />
+              Atendemos fim de semana
+            </div>
+            {{else}}
+            <div class="open-on-weekends closed">
+              <img src="/images/info-red.svg" alt="Informações" />
+              Não atendemos fim de semana
+            </div>
+            {{/if}}
+
+          </div>
+
+          <!--Botão de contato-->
+          <!-- Link para o whatsapp-->
+          <!-- Target para abrir em uma aba separada-->
+          <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}&text= Oi, quero conversar sobre visitas no {{orphanage.name}}" target="_blank"
+            class="primary-button" type="button">
+            <img src="/images/whatsapp.svg" alt="Chamar no whatsapp" />
+            Entrar em contato
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!--JS recomendado ser o ultimo elemento a ser chamado-->
+  <script src="/scripts/page-orphanage.js"></script>
+</body>
+
 </html>
