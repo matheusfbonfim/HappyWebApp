@@ -23,6 +23,7 @@ module.exports = {
         return res.render('index')
     },
 
+    // Função que mostra a informação de cada orfanato
     async orphanage(req,res){
         // Para pegar o id da url, utiliza-se o query
         const id = req.query.id
@@ -84,8 +85,27 @@ module.exports = {
         
     },
 
+    // Criar a pagina de cada orfanato
     createOrphanage(req,res){
         // Tem como resposta a pagina create-orphanage renderizada
         return res.render('create-orphanage')
+    },
+
+    // Salvar os dados 
+    saveOrphanage(req,res){
+        // Retorna o objeto todo enviando no formulário
+        //console.log(req.body)
+
+        const fields = req.body; // Campos do formulário como objetos
+
+        // Validar se todos os campos estao preenchidos
+        // Propriedade do proprio JS para verificar valores
+        // Retorna um array com elementos
+        // Verifica se inclue algo vazio e retorna true or false
+        //console.log(Object.values(fields).includes(''))
+        
+        if(Object.values(fields).includes('')){
+            return res.send('Todos os campos devem ser preenchidos')
+        }
     }
 }

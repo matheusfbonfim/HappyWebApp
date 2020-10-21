@@ -19,6 +19,11 @@ const server = express()
 
 server
 
+// Utilizando o body da requisição 
+// Extendendo as propriedades da url
+// Assim em pages é possivel acessar o req.body
+.use(express.urlencoded({extended: true}))
+
 // Utilizando os arquivos estatico (Sem alteração dinamica/Sem ligação com banco de dados...)
 // Todos arquivos da pasta public são estaticos, e assim não altera em tempo real
 // Abaixo mostra em que pasta (public) estão os arquivos estaticos
@@ -49,6 +54,8 @@ server
 .get('/orphanage',pages.orphanage)
 .get('/orphanages',pages.orphanages)
 .get('/create-orphanage',pages.createOrphanage)
+// Irá enviar o formulário para processo no backend
+.post('/save-orphanage', pages.saveOrphanage)
 
 
 // Ligar o servidor
