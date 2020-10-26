@@ -62,20 +62,22 @@ Back-end
 
 ## 🚀 Como executar o projeto
 
-- Clone this repository:
-$ git clone https://github.com/matheusfbonfim/happy
+   ```
+   - Clone this repository:
+   $ git clone https://github.com/felipecastrosales/Happy Happy
 
-- Enter in directory:
-$ cd happy
+   - Enter in directory:
+   $ cd Happy
 
-- For install dependencies:
-$ npm install
+   - For install dependencies:
+   $ npm install
 
-- Execute application:
-$ npm start
+   - Execute application:
+   $ npm start
 
-- Open your browser in:
-http://localhost:5500/
+   - Open your browser in:
+   http://localhost:5500/
+   ```
 
 💡O Front End precisa que o Back End esteja sendo executado para funcionar.
 
