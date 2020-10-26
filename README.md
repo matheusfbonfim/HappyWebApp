@@ -62,12 +62,22 @@ Back-end
 
 ## 🚀 Como executar o projeto
 
-Podemos considerar este projeto como sendo divido em três partes:
-1. Back End (pasta server) 
-2. Front End (pasta web)
-3. Mobile (pasta mobile)
+- Clone this repository:
+$ git clone https://github.com/matheusfbonfim/happy
 
-💡Tanto o Front End quanto o Mobile precisam que o Back End esteja sendo executado para funcionar.
+- Enter in directory:
+$ cd happy
+
+- For install dependencies:
+$ npm install
+
+- Execute application:
+$ npm start
+
+- Open your browser in:
+http://localhost:5500/
+
+💡O Front End precisa que o Back End esteja sendo executado para funcionar.
 
 ## :memo: License
 
