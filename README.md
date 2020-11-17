@@ -64,10 +64,10 @@ Back-end
 
    ```
    - Clone this repository:
-   $ git clone https://github.com/felipecastrosales/Happy Happy
+   $ git clone https://github.com/matheusfbonfim/happy
 
    - Enter in directory:
-   $ cd Happy
+   $ cd happy
 
    - For install dependencies:
    $ npm install
