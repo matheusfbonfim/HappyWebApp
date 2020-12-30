@@ -98,7 +98,7 @@ Gostou? Deixe uma estrelinha para ajudar o projeto ⭐
 
 <!-- Mensagem final -->
 <h3 align="center">
-Feito com ❤️ por <a href="https://www.linkedin.com/in/matheus-bonfim-448667169/">Matheus Bonfim</a>
+Feito com ❤️ por <a href="https://www.linkedin.com/in/matheusfbonfim/">Matheus Bonfim</a>
 <br><br>
 <a href="https://rocketseat.com.br">
   <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
