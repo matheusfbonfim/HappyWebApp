@@ -88,7 +88,7 @@ Back-end
    http://localhost:5500/
    ```
 
-💡O Front End precisa que o Back End esteja sendo executado para funcionar.
+💡 O Front End precisa que o Back End esteja sendo executado para funcionar.
 
 ## :memo: License
 
@@ -97,11 +97,8 @@ O projeto está sobre a licença [MIT](./LICENSE) ❤️
 Gostou? Deixe uma estrelinha para ajudar o projeto ⭐
 
 <!-- Mensagem final -->
-<h3 align="center">
+<h3 align="center"><br>
 Feito com ❤️ por <a href="https://www.linkedin.com/in/matheusfbonfim/">Matheus Bonfim</a>
 <br><br>
-<a href="https://rocketseat.com.br">
-  <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
-</a>
 </h3>
 </h3>
