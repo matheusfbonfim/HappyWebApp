@@ -73,7 +73,7 @@ Back-end
 
    ```
    - Clone this repository:
-   $ git clone https://github.com/matheusfbonfim/happy
+   $ git clone https://github.com/matheusfbonfim/web-app-happy.git
 
    - Enter in directory:
    $ cd happy
